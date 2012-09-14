@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="HomeView" actionBarVisible="false" tabBarVisible="false" contentCreationComplete="creationComplete(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.views.Grol;
+			
+			import flash.utils.Timer;
+			
+			import mx.events.FlexEvent;
+			
+			private var go:Timer = new Timer(3000, 0);
+			
+			protected function creationComplete(event:FlexEvent):void{
+				//trace("creation complete");
+				/*
+				This is where we decide if this is first load or not.
+				*/
+				
+				//go = new Timer(2000, 0);
+				//go.addEventListener(TimerEvent.TIMER_COMPLETE, goNow);
+				//go.start();
+				navigator.pushView(ClassSelectionView);
+			}
+			
+			private function goNow(event:TimerEvent):void{
+				trace("Timer Fired");
+				go.stop();
+				go.removeEventListener(TimerEvent.TIMER_COMPLETE, goNow);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:VGroup width="100%" height="100%" >
+		<!--s:Image width="320" source="assets/GROLv52.png" verticalAlign="top"/-->
+	</s:VGroup>
+</s:View>
