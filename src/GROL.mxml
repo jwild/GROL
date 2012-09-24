@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
-			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160">
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+							xmlns:s="library://ns.adobe.com/flex/spark"
+							applicationDPI="160" backgroundColor="#000000"
+							contentCreationComplete="viewnavigatorapplication1_contentCreationCompleteHandler(event)"
+							firstView="com.views.GladiatorRiseOfLegendsHomeView"
+							splashScreenImage="@Embed('assets/GROLv52.png')"
+							splashScreenScaleMode="stretch" >
+	
+	<fx:Style source="assets/skins/main.css"/> 
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import com.views.Grol;
+			
+			protected function viewnavigatorapplication1_contentCreationCompleteHandler(event:FlexEvent):void{
+				// TODO Auto-generated method stub
+				trace("creation complete main");
+			}
+			
+		]]>
+	</fx:Script>
+	
+	
+	
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-</s:Application>
+</s:ViewNavigatorApplication>

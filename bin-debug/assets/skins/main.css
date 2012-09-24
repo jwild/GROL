@@ -1,0 +1,13 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+
+s|ViewNavigatorApplication {
+	/*skinClass:              ClassReference("assets.skins.BGApplicationSkin");
+	backgroundImage:        Embed('../bg.jpg');
+	backgroundColor:        #000000;*/
+}
+
+s|View {
+	backgroundAlpha:        0;
+	skinClass: ClassReference("assets.skins.ViewBackgroundSkin");
+}
