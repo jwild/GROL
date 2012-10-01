@@ -13,7 +13,7 @@
 	
 	<s:Rect id="backgroundRect" left="0" right="0" top="0" bottom="0"  >
 		<s:fill>
-			<s:BitmapFill source="@Embed('assets/bg.jpg')"/>
+			<s:BitmapFill source="@Embed('assets/background.png')" />
 		</s:fill>
 	</s:Rect>
 	

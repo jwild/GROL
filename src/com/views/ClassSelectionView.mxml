@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
 		xmlns:s="library://ns.adobe.com/flex/spark"
-		actionBarVisible="false" contentCreationComplete="creationComplete(event)"
+		actionBarVisible="false"  viewActivate="creationComplete(event)"
 		tabBarVisible="false" textAlign="center">
 	
 	<fx:Script>
 		<![CDATA[
-			import mx.events.FlexEvent;
 			import com.views.Grol;
 			
-			protected function creationComplete(event:FlexEvent):void{
+			import mx.events.FlexEvent;
+	
+			import spark.events.ViewNavigatorEvent;
+			
+			protected function creationComplete(event:ViewNavigatorEvent):void{
 				trace("creation complete: Class Selection");
 				/*
 				This is where we decide if this is first load or not.
 				*/
 				
-				
-				
-				
 			}
+			
 			
 		]]>
 	</fx:Script>
@@ -26,14 +27,13 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<!--s:Image source="assets/bg.jpg" width="100%" verticalAlign="top"/-->
+	
 	<s:VGroup width="100%" height="100%" horizontalAlign="center">
-		<s:Spacer width="100%" height="20" />
-		<s:Image  width="245" height="97" horizontalAlign="center" source="assets/Logo.png"/>
-		<s:Spacer width="100%" height="20" />
-		<s:Image width="187" height="61" horizontalAlign="center" source="assets/SLAVE.png" click="navigator.pushView(NameSelectionView)"/>
-		<s:Image width="187" height="61" horizontalAlign="center" source="assets/FREE-MAN.png"/>
-		<s:Image width="187" height="61" horizontalAlign="center" source="assets/MERCATORES.png"/>
-		<s:Image width="187" height="61" horizontalAlign="center" source="assets/AMAZON.png"/>
+		<s:Image  width="320" height="74" horizontalAlign="center" source="assets/class_titlebar.png"/>
+		<s:Spacer width="100%" height="50" />
+		<s:Image width="187" height="61" horizontalAlign="center" source="assets/slave_select.png" click="navigator.pushView(NameSelectionView)"/>
+		<s:Image width="187" height="61" horizontalAlign="center" source="assets/freeman_select.png"/>
+		<s:Image width="187" height="61" horizontalAlign="center" source="assets/mercatores_select.png"/>
+		<s:Image width="187" height="61" horizontalAlign="center" source="assets/amazon_select.png"/>
 	</s:VGroup>
 </s:View>
